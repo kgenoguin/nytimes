@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>NY Times Headlines</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  </head>
+
+  <body>
+    <center>
+      <div class = "container">
+        <div class = "page-header">
+            <h3> NY Times Headlines </h3>
+        </div>
+        {% for new in news %}
+          <div class = "panel panel-info">
+            <div class = "panel-heading">
+              <p> {{ new }} </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </center>
+  </body>
