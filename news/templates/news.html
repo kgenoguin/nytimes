@@ -9,12 +9,16 @@
     <center>
       <div class = "container">
         <div class = "page-header">
-            <h3> NY Times Headlines </h3>
+            <h2> NY Times Headlines </h2>
         </div>
         {% for new in news %}
           <div class = "panel panel-info">
             <div class = "panel-heading">
-              <p> {{ new }} </p>
+              <h4> {{ new.title }} </h4>
+            </div>
+            <div class = "panel-body">
+              <p>Raw: {{ new }}</p>
+              <p>Click this link to redirect: {{ new.link|safe }}</p>
             </div>
           </div>
         {% endfor %}
